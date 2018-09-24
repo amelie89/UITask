@@ -11,5 +11,5 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-cucumberjs');
     grunt.loadNpmTasks('grunt-webdriver');
-    grunt.registerTask('default', ['webdriver:tests']);
+    grunt.registerTask('default', ['webdriverIO:tests']);
 };

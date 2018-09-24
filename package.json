@@ -1,7 +1,7 @@
 {
   "name": "UITask",
   "version": "1.1.5",
-  "description": "WebDriver bindings for Node.js with Cucumber",
+  "description": "WebDriverIO with cucumber",
   "main": "index.js",
   "scripts": {
     "node-inspector": "node-inspector --debug-port 5859 --no-preload",
@@ -12,11 +12,9 @@
   },
   "keywords": [
     "selenium",
-    "web",
     "testing",
     "webdriverjs",
-    "webdriver",
-    "automation"
+    "webdriver"
   ],
   "dependencies": {
     "allure-commandline": "^2.5.0",
