@@ -9,12 +9,7 @@ exports.config = {
         // 'path/to/excluded/files'
     ],
 
-    // ============
-    // Capabilities
-    // ============
-
     maxInstances: 10,
-
     capabilities: [
 
         {
@@ -29,15 +24,10 @@ exports.config = {
     sync: true,
     logLevel: 'silent',     // Level of logging verbosity: silent | verbose | command | data | result | error
     coloredLogs: true,      // Enables colors for log output.
-
-    //
-    // Set a base URL in order to shorten url command calls. If your url parameter starts
-    // with "/", then the base url gets prepended.
     baseUrl: 'http://localhost:8080',
     waitforTimeout: 90000,            // Default timeout for all waitFor* commands.
     connectionRetryTimeout: 90000,    // Default timeout in milliseconds for request  if Selenium Grid doesn't send response
     connectionRetryCount: 3,          // Default request retries count
-
     services: ['selenium-standalone'],
     framework: 'cucumber',
     reporters: ['allure'],
@@ -50,8 +40,6 @@ exports.config = {
         },
     },
 
-
-    // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         require: ['./scenarioSteps/fillTheFormScenarioSteps.js', './scenarioSteps/fillTheFormNegativeScenarioSteps.js'],   // <string[]> (file/dir) require files before executing features
         backtrace: true,    // <boolean> show full backtrace for errors
