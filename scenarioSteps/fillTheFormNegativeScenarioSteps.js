@@ -1,15 +1,12 @@
-import fillTheForm from '../pages/fillTheFormPage';
+import fillTheForm from "../pages/fillTheFormPage"
 
-const data = require("../data/data.js");
-const {When,Then} = require('cucumber');
-
+const data = require("../data/data.js")
+const { When, Then } = require("cucumber")
 
 When(/^user submit the first form without filling out name and message$/, function () {
-    fillTheForm.submitFirstForm();
-});
+	fillTheForm.submitFirstForm()
+})
 
 Then(/^user verifies warning message for the first form$/, function () {
-    fillTheForm.verifyConfirmationForTheFirstForm(data.warningMessage);
-});
-
-
+	fillTheForm.verifyConfirmationForTheFirstForm(data.warningMessage)
+})

@@ -1,12 +1,11 @@
-"use strict";
+
+"use strict"
 
 class Page {
-    constructor() { }
-
-    open(path) {
-        browser.url(path)
-        browser.windowHandleMaximize()
-    }
+	static open (path) {
+		browser.url(path)
+		browser.windowHandleMaximize()
+	}
 }
 
-module.exports = Page;
+module.exports = Page
