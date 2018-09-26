@@ -29,6 +29,7 @@ npm install wdio-cucumber-framework --save-dev
 All the required dependencies are added in `package.json` file. To grab the dependencies we need to run ```npm install```.
 
 **WebdriverIO config file**
+
 Since WebdriverIO uses config files to setup and to execute tests, all config files are located in `config` directory. Following code shows the structure of the `wdio.conf.js` file:
  
  ```sh
@@ -117,7 +118,7 @@ Feature: Filling the form negative scenario
 
 Next level of abstraction are scenario steps which are actually used as the interface between the feature files and pages. All steps from feature files are implemented in scenario steps.
 Following example shows the scenario steps for the first test. Firstly, we need to import the page files we are going to use, and to define the Given, When, Then annotations. Since all the methods, interaction with the application and behavior is implemented on the page level, it is pretty simple to follow the structure.
-The only job is to create functions, call the appropriate method, and to call and define parameters from the data file.
+The only job is to create functions, use the appropriate methods, and to call and define parameters from the data file.
 ```
 import fillTheForm from '../pages/fillTheFormPage';
 const data = require("../data/data.js");
