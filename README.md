@@ -13,7 +13,9 @@ Technologies used
 # Setup and installation
 
 Development IDE: Webstorm
+
 Prerequisite: node.js and npm installed on machine
+
 In order to use the JavaScript task runner Grunt, following commands needs to be executed:
 ```sh
 npm install grunt --save-dev
@@ -27,7 +29,7 @@ npm install wdio-cucumber-framework --save-dev
 All the required dependencies are added in `package.json` file. To grab the dependencies we need to run ```npm install```.
 
 **WebdriverIO config file**
- Since WebdriverIO uses config files to setup and to execute tests, all config files are located in `config` directory. Following code shows the structure of the `wdio.conf.js` file:
+Since WebdriverIO uses config files to setup and to execute tests, all config files are located in `config` directory. Following code shows the structure of the `wdio.conf.js` file:
  
  ```sh
 exports.config = {
@@ -160,8 +162,10 @@ module.exports = Page;
 ```
 
 Second page file that is created, `fillTheFormPage` extends the created base page file. First step is to define all the selectors. After that, we create all the necessary methods.
+
 In the first test (filling out the first form) after the page is opened, verification is added to check if the page title is correct. After that, to fill out the first form, method is created to enter the name and message, and then to submit the form. Last method is created to verify the success message.
-In the first test, scenario for filling out the second form, the method is created to enter the name and message, and since for the captcha the numbers are changing randomly, first we extract the numbers, using regex, then parse the numbers to Integer, add them, and set that value to the input for the result. As the last part verification is added for the success message.
+
+In the first test (filling out the second form), the method is created to enter the name and message, and since for the captcha the numbers are changing randomly, first we extract the numbers, using regex, then parse the numbers to Integer, add them, and set that value to the input text for the result. As the last part verification is added for the success message.
 
 ```
 class fillTheFormPage extends Page {
@@ -216,6 +220,15 @@ module.exports = new fillTheFormPage();
 ```
 
 All the necessary data (urls, name, etc..) are located in the `data.js` file in the `data` directory.
+
+Following screenshots are attached as reference for the test executions and reports.
+![testexecution](https://user-images.githubusercontent.com/10046279/46074801-e4044c00-c188-11e8-9b6d-6a2576d45e47.PNG)
+
+
+
+![reports](https://user-images.githubusercontent.com/10046279/46074879-2463ca00-c189-11e8-9503-e9cd432e5502.PNG)
+
 The project can serve as a base for further development, implementation and integration.
+
 
 
